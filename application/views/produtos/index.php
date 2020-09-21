@@ -13,11 +13,12 @@
             <?php endif ?>
             <h1> Produtos</h1>
             <table class="table">
-                <?php foreach($produtos as $produto) : ?>
+            <?php foreach($produtos as $produto) : ?>
                 <tr>
-                    <td><?= anchor("produtos/mostra?id={$produto['id']}", $produto["nome"])?></td>
-            </tr>
-                </tr>
+                    <td><?= anchor("produtos/mostra/{$produto['id']}", $produto["nome"])?></td>
+                    <td><?= character_limiter($produto["descricao"],10)?> </td>
+                    <td><?= numeroEmReais($produto["preco"])?></td>
+                </tr>     
             <?php endforeach ?>
             </table>
             <?php if($this->session->userdata("usuario_logado")) : ?>
