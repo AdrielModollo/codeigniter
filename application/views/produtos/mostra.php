@@ -6,7 +6,8 @@
 
     <body>
         <div class="container">
-        <h1><?=  auto_typography(html_escape($produto["nome"])) ?><br></h1>
+        <h1>
+        <?=  auto_typography(html_escape($produto["nome"])) ?><br></h1>
         <?=  auto_typography(html_escape($produto["preco"])) ?><br>
         <?= auto_typography(html_escape($produto["descricao"])) ?><br>
         </div> 
