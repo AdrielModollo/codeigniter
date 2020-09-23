@@ -7,5 +7,8 @@ class Vendas_model extends CI_Model {
             array("vendido" => 1),
             array("id" => $venda["produto_id"])
         );
+        
     }
+
+    
 }
